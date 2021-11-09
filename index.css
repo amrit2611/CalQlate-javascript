@@ -1,0 +1,158 @@
+*{
+    /* font-family: 'Noto Sans Mono', monospace; */
+    font-family: 'Rubik', sans-serif;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to left, rgb(0, 162, 255, .75), rgb(5, 255, 5, .75));
+}
+
+#heading{
+    text-align: center;
+}
+#calculator{ 
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: minmax(80px, auto) repeat(5, 80px);
+}
+
+button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: 2px solid white;
+    outline: none;
+    background-color: rgb(255, 255, 255, .6);
+}
+
+i{
+    align-items: center;
+    padding-top: 7px;
+} 
+
+#all-clear, #equals{
+    grid-column: span 2;
+}
+
+#display-area{
+    grid-column: 1/-1;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+#previous-display{
+    color: rgb(196, 196, 196);
+    font-size: 1.5rem;
+}
+
+#current-display{
+    font-size: 2.5rem;
+}
+
+#seven{
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+#eight{
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+#nine{
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+
+#four{
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+#five{
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+#six{
+    grid-column: 3/4;
+    grid-row: 4/5;
+}
+
+#one{
+    grid-column: 1/2;
+    grid-row: 5/6;
+}
+
+#two{
+    grid-column: 2/3;
+    grid-row: 5/6;
+}
+
+#three{
+    grid-column: 3/4;
+    grid-row: 5/6;
+}
+
+#zero{
+    grid-column: 2/3;
+    grid-row: 6/7;
+}
+#dot{
+    grid-column: 1/2;
+}
+
+/* #percentage{
+    grid-column: 3/4;
+} */
+
+#divide{
+    grid-column: 4/5;
+}
+
+#multiply{
+    grid-column: 4/5;
+}
+
+#subtract{
+    grid-column: 4/5;
+}
+
+#add{
+    grid-column: 4/5;
+}
+
+#delete{
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+#percentage, #divide, #multiply, #add, #subtract{
+    background-color: rgb(185, 210, 255);
+}
+
+#equals{
+    grid-column: 3/5;
+    grid-row: 6/7;
+    background-color: rgb(164, 255, 164);
+}
+
+#all-clear, #delete{
+    background-color: rgb(255, 226, 226);
+}
+
+button:hover, #equals:hover, #percentage:hover, #divide:hover, #multiply:hover, #subtract:hover, #add:hover, #all-clear:hover, #delete:hover{
+    background-color: rgb(255, 255, 255, .8);
+}
+
